@@ -13,6 +13,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "android-managed-virtual-device"
-include(
-    ":app"
-)
+include(":app")
+include(":baselineprofile")

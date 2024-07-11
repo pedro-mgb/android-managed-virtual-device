@@ -3,6 +3,7 @@ import com.android.build.api.dsl.ManagedVirtualDevice
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    alias(libs.plugins.baselineprofile)
 }
 
 android {
@@ -77,7 +78,9 @@ dependencies {
     implementation(libs.android.material)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.profileinstaller)
     testImplementation(kotlin("test"))
     androidTestImplementation(kotlin("test"))
     androidTestImplementation(libs.espresso.core)
+    "baselineProfile"(project(":baselineprofile"))
 }

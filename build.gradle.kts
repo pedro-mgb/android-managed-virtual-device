@@ -4,6 +4,8 @@ plugins {
     alias(libs.plugins.detekt)
     alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.kotlinx.kover)
+    alias(libs.plugins.android.test) apply false
+    alias(libs.plugins.baselineprofile) apply false
 }
 
 apply(from = "$rootDir/ci.gradle.kts")
